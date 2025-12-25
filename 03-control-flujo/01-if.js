@@ -10,3 +10,13 @@ if (edad>17) {
 }
 
 // para mover una linea es alt+flecha arriba
+
+//if para objetos
+const objeto1 = {
+    casa: 'grande',
+    puertas: 4,
+};
+
+if('casa' in objeto1){
+    console.log('la propiedad casa existe en objeto1');
+}

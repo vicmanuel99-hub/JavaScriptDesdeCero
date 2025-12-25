@@ -1,4 +1,5 @@
-function saludar(){
+//01-funciones muy simples
+ function saludar(){
     console.log('saluda soy una funsion');
 }
 
@@ -9,4 +10,4 @@ function suma(){
 }
 let resultado = suma();
 console.log(resultado); //console.log(suma());  ok
-////------------------------
+////-----------------funcion con parametro
