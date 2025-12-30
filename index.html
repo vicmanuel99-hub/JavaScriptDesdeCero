@@ -1,16 +1,106 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<!-- soy un comentario html-->
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IINDEX</title>
-</head>
-<body>
-    hola mundooo
-    <script src="09-destructuring/4.casoreal.js">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demo JavaScript Moderno</title>
 
-    </script>  
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* el rectangulo detras de los botones*/
+    .card {  
+      background: #0c2286; /*color del cuadrado*/
+      padding: 24px; /*tamaño del cuadrado*/
+      border-radius: 12px; /*esquina con borde*/
+      width: 360px; /*ancho del elemento*/
+      box-shadow: 0 20px 200px rgba(187, 29, 29, 0.4); /*gestiona la sombra*/
+    }
+
+    h1 {
+      font-size: 20px; 
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .result {
+      margin-top: 16px;
+      padding: 12px;
+      background: #020617;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 18px;
+      border: 1px solid #1e293b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Closure: Contador Privado</h1>
+
+    <button id="btnIncrementar">Incrementar</button>
+    <button id="btnReset">Resetear</button>
+
+    <div class="result" id="resultado">0</div>
+  </div>
+
+  <script src="11.clousures/06.js">
+    function crearContador() {
+      let count = 0;
+
+      return {
+        incrementar() {
+          count++;
+          return count;
+        },
+        reset() {
+          count = 0;
+          return count;
+        }
+      };
+    }
+
+    const contador = crearContador();
+
+    const btnIncrementar = document.getElementById("btnIncrementar");
+    const btnReset = document.getElementById("btnReset");
+    const resultado = document.getElementById("resultado");
+
+    btnIncrementar.addEventListener("click", () => {
+      resultado.textContent = contador.incrementar();
+    });
+
+    btnReset.addEventListener("click", () => {
+      resultado.textContent = contador.reset();
+    });
+  </script>
 
 </body>
 </html>
