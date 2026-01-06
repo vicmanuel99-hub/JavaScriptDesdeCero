@@ -1,0 +1,95 @@
+* {
+    /*aqui puedes poner regla general para los elementos*/
+    margin:0px;
+    padding: 0px; /*margen interior, como el de word y empujaras con la raya, ese es*/
+    }
+
+body {/*body es todo el fonda de la pag*/
+    background: rgba(189, 177, 44, 0.922);
+    font-family: Arial, Helvetica;     /*tipo letra arial, elseif: Helvetica*/
+
+}
+
+#container {
+    /*tengo una cabecera con id container asi q le doy estilo aqui*/
+    width: 1700px;     /*tamaño*/
+    margin: 50px auto;     /*me centra*/
+    border: 1px solid black;    /*linea negra del borde* 1px es grosor*/
+    
+}
+
+header {
+    background-color: red;
+    height: 100px;
+    width: 100%;
+    margin:0px;     /*separacion del borde*/
+    text-align: center; /*centro el texto horizontalmente*/
+    line-height: 100px; /*centro el texto verticalmente*/
+    color: white;
+    border-bottom:3px dashed black;
+    
+}
+
+nav ul li{ /*accedi al li que esta dentro de ul y dentro de nav, solo a esa condicion*/
+    float: left; /*txt en cadena, no con salto de linea*/
+    list-style: none; /*sin estilo de letra*/
+    margin: 10px 10px  10px 10px; /* lo mismo que poner solo 10px donde asume los 4 lados de margen*/
+    line-height: 30px;
+   
+}
+
+nav{
+    background-color: rgba(34, 34, 189, 0.93);
+    height: 50px;
+}
+
+.saltoA{
+    clear:both; /*mueve elemento flotantes abajo*/
+}
+#content{
+    float: left;
+    padding: 40px; /*aca estoy sumando 20px por lado de margen*/
+    width: calc(80% - 80px); /*por eso uso el calc para redimencionar 80px menos */
+    background: green;
+    min-height: 500px;
+    
+}
+.article{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+.article p{
+    border-bottom: 1px solid #eee;
+}
+.article:first-child{ /* x:b* aplicale al x que sean b, solo es para 1 siempre. // si no hay ningun x b no hara nada*/
+
+}
+.article h2:first-child{/* c a:b  = entro a c y aplica al a que sea first child*/
+    padding-top: 10px;
+}
+
+.article h2{
+    font-size: 25px; /*cambio tamaño de letra*/
+    
+}
+.article p{
+padding: 5px 15px 18px 0px; /*arriba → derecha → abajo → izquierda : reloj */
+margin: 0px;
+}
+
+aside{ /*la barra lateral*/
+    padding: 10px;
+    width: calc(20% - 20px); /*espacio de barra con padding le quito 20px por lado*/
+    float:left;
+    background: orange;
+    min-height: 500px;
+}
+footer{ /*estilo para el pie de pag*/
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}

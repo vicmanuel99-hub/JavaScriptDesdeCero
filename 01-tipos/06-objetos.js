@@ -11,7 +11,7 @@ let personaje = { // reconombrando variables
 };
 console.log(personaje);
 console.log(personaje.nombre); //imprime nombre
-console.log(personaje['anime']); //otro metodo de acceso a la var
+console.log(personaje['nombre']); //otro metodo de acceso a la var
 
 personaje.edad  = 2; //renombrar  elemento edad
 personaje['edad'] = 2; //otro metodo
